@@ -1,0 +1,18 @@
+{{define "title"}}Home{{end}}
+
+{{define "content"}}
+<table>
+{{range .Logs}}
+    <tr>
+        <td>{{.Message}}</td>
+        <td>{{.Author}}</td>
+    </tr>
+{{else}}
+    <p> No commit logs</p>
+{{end}}
+</table>
+{{end}}
+
+{{define "index"}}
+{{template "layout" .}}
+{{end}}

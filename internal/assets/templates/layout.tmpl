@@ -1,0 +1,15 @@
+{{define "layout"}}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{block "title" .}}Twig{{end}}</title>
+    </head>
+    <body>
+        {{template "header" .}}
+        <main>
+            {{block "content" .}}{{end}}
+        </main>
+        {{template "footer" .}}
+    </body>
+</html>
+{{end}}
